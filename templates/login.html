@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Login - Diabetes Prediction{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h2>Welcome Back</h2>
+            <p>Please login to access your health dashboard</p>
+        </div>
+
+        <form method="POST" class="auth-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required
+                       placeholder="Enter your registered email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required
+                       placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="auth-submit-btn">Login →</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>New to our platform? <a href="{{ url_for('signup') }}">Create account</a></p>
+            <a href="#forgot-password" class="text-muted">Forgot Password?</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

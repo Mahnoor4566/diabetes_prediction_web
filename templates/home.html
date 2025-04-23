@@ -1,0 +1,55 @@
+{<!-- home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home - Diabetes Prediction{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="fade-in">Take Control of Your Health</h1>
+        <p class="slide-up">
+            Empower yourself with our AI-driven diabetes risk assessment.
+            <span class="highlight">Get instant insights</span> and take proactive steps towards better health.
+        </p>
+
+        <div class="button-container">
+            <a href="{{ url_for('predict') }}" class="cta-button pulse">
+                <span>Check Your Risk Now</span>
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                </svg>
+            </a>
+            <a href="{{ url_for('chatbot_page') }}" class="cta-button secondary">
+                <span>Ask HealthBot</span>
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M6,9H18V11H6M14,14H6V12H14M18,8H6V6H18"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/diabetes.png') }}" alt="Health Monitoring" class="float">
+    </div>
+</div>
+
+<div class="features-section">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Instant Results</h3>
+            <p>Get your diabetes risk assessment in seconds using advanced AI algorithms</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure & Private</h3>
+            <p>Your health data is protected with enterprise-grade security</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>24/7 Support</h3>
+            <p>Our AI HealthBot is always available to answer your questions</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

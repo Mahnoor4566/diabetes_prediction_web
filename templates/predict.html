@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+
+{% block title %}Diabetes Prediction{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if 'gender' not in session %}
+        {# Gender selection handled by gender.html #}
+
+    {% else %}
+    <!-- Prediction Form -->
+    <div class="prediction-header">
+        <h2>Diabetes Risk Assessment for {{ session['gender']|capitalize }}</h2>
+        <a href="{{ url_for('predict') }}" class="change-gender">↻ Change Gender</a>
+    </div>
+
+    <!-- Security & Validation Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="alert-messages">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('prediction_form') }}">
+
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <!-- Hidden field for males, visible for females -->
+        {% if session['gender'] == 'female' %}
+        <div class="form-group">
+            <label>Pregnancies <span class="info">(Number of pregnancies)</span></label>
+            <input type="number" name="Pregnancies"
+                   value="{{ form_data.Pregnancies if form_data }}"
+                   min="0" max="20"
+                   title="Number of pregnancies (0-20)"
+                   required>
+        </div>
+        {% else %}
+        <input type="hidden" name="Pregnancies" value="0">
+        {% endif %}
+
+        <!-- Common Fields with Enhanced Validation -->
+        <div class="form-group">
+            <label>Glucose (mg/dL) <span class="info">(Fasting blood sugar)</span></label>
+            <input type="number" name="Glucose"
+                   value="{{ form_data.Glucose if form_data }}"
+                   min="50" max="300"
+                   title="Normal range: 70-125 mg/dL"
+                   required>
+            <div class="input-hint">Normal range: 70-125 mg/dL</div>
+        </div>
+
+        <div class="form-group">
+            <label>Blood Pressure (mmHg) <span class="info">(Diastolic)</span></label>
+            <input type="number" name="BloodPressure"
+                   value="{{ form_data.BloodPressure if form_data }}"
+                   min="40" max="180"
+                   title="Valid range: 40-180 mmHg"
+                   required>
+            <div class="input-hint">Normal range: 60-80 mmHg</div>
+        </div>
+
+        <div class="form-group">
+            <label>Skin Thickness (mm) <span class="info">(Triceps fold)</span></label>
+            <input type="number" name="SkinThickness"
+                   value="{{ form_data.SkinThickness if form_data }}"
+                   min="0" max="99"
+                   title="Typical range: 10-50 mm"
+                   required>
+            <div class="input-hint">Normal range: 10-50 mm</div>
+        </div>
+
+        <div class="form-group">
+            <label>Insulin (μU/mL) <span class="info">(2-hour serum)</span></label>
+            <input type="number" name="Insulin"
+                   value="{{ form_data.Insulin if form_data }}"
+                   min="0" max="846"
+                   title="Valid range: 14-846 μU/mL"
+                   required>
+            <div class="input-hint">Normal fasting range: 2-25 μU/mL</div>
+        </div>
+
+        <div class="form-group">
+            <label>BMI <span class="info">(kg/m²)</span></label>
+            <input type="number" step="0.1" name="BMI"
+                   value="{{ form_data.BMI if form_data }}"
+                   min="10" max="50"
+                   title="Valid range: 10-50 kg/m²"
+                   required>
+            <div class="input-hint">Normal range: 18.5-24.9 kg/m²</div>
+        </div>
+
+        <div class="form-group">
+            <label>Diabetes Pedigree Function <span class="info">(Genetic likelihood)</span></label>
+            <input type="number" step="0.001" name="DiabetesPedigreeFunction"
+                   value="{{ form_data.DiabetesPedigreeFunction if form_data }}"
+                   min="0.08" max="2.5"
+                   title="Range: 0.08-2.5"
+                   required>
+            <div class="input-hint">Typical range: 0.08-2.5</div>
+        </div>
+
+        <div class="form-group">
+            <label>Age (years)</label>
+            <input type="number" name="Age"
+                   value="{{ form_data.Age if form_data }}"
+                   min="1" max="120"
+                   title="Valid age range: 1-120 years"
+                   required>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="cta-button" id="submit-btn">Check Risk Now</button>
+        </div>
+    </form>
+
+    {% if result %}
+<div class="risk-assessment-container">
+    <div class="risk-banner {{ 'high-risk' if result.has_risk else 'low-risk' }}">
+        <div class="risk-icon">
+            {% if result.has_risk %}
+            ⚠️
+            {% else %}
+            ✅
+            {% endif %}
+        </div>
+
+        <h3 class="risk-title">
+            {% if result.has_risk %}
+            Potential Diabetes Risk Detected
+            {% else %}
+            No Significant Risk Detected
+            {% endif %}
+        </h3>
+
+        {% if result.has_risk %}
+        <div class="risk-actions">
+            <p class="action-text">For detailed analysis of your risk type:</p>
+            <a href="{{ url_for('detailed_prediction') }}" class="cta-button detailed-analysis-btn">
+                Get Specialized Analysis →
+            </a>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="health-recommendation">
+        {% if result.has_risk %}
+        <p class="recommendation-text">
+            <strong>Recommended Next Step:</strong>
+            Consult a healthcare professional within 2 weeks for comprehensive testing
+        </p>
+        {% else %}
+        <p class="recommendation-text">
+            <strong>Maintain Your Health:</strong>
+            Consider annual check-ups and maintain healthy lifestyle habits
+        </p>
+        {% endif %}
+    </div>
+
+    <div class="medical-disclaimer">
+        <p>⚠️ This preliminary assessment is not a medical diagnosis.
+           Always consult a healthcare professional for accurate evaluation.</p>
+    </div>
+</div>
+{% endif %}
+    {% endif %}
+
+</div>
+{% endblock %}

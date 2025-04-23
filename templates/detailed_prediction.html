@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block title %}Detailed Diabetes Risk Analysis{% endblock %}
+
+{% block content %}
+<div class="container detailed-analysis">
+    <h2>Comprehensive Diabetes Risk Evaluation</h2>
+    <p class="subheader">Please provide additional health information for precise risk categorization</p>
+
+    <!-- Validation Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="alert-messages">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('detailed_prediction') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <div class="form-section">
+            <h3>Medical History</h3>
+            
+            <div class="form-group">
+                <label>High Blood Pressure</label>
+                <div class="switch-container">
+                    <input type="checkbox" name="HighBP" value="1" id="highBP">
+                    <label for="highBP" class="switch-label">Currently diagnosed or medication</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>High Cholesterol</label>
+                <div class="switch-container">
+                    <input type="checkbox" name="HighChol" value="1" id="highChol">
+                    <label for="highChol" class="switch-label">Diagnosed or medication</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Physical Health</h3>
+            
+            <div class="form-group">
+                <label>BMI (Body Mass Index)</label>
+                <input type="number" name="BMI" min="10" max="50" step="0.1" 
+                       required title="Enter value between 10-50">
+                <div class="input-hint">Calculate using: weight(kg) / (height(m))²</div>
+            </div>
+
+            <div class="form-group">
+                <label>Heart Disease History</label>
+                <select name="HeartDiseaseorAttack" required>
+                    <option value="0">No history</option>
+                    <option value="1">Previous heart attack or coronary disease</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Health Indicators</h3>
+            
+            <div class="form-group">
+                <label>General Health Perception</label>
+                <select name="GenHlth" required>
+                    <option value="1">Excellent</option>
+                    <option value="2">Very Good</option>
+                    <option value="3">Good</option>
+                    <option value="4">Fair</option>
+                    <option value="5">Poor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Physical Health Days (Last 30 Days)</label>
+                <input type="number" name="PhysHlth" min="0" max="30" 
+                       required title="Enter days 0-30">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h3>Demographics</h3>
+            
+            <div class="form-group">
+                <label>Age Group</label>
+                <select name="Age" required>
+                    <option value="1">18-24</option>
+                    <option value="2">25-29</option>
+                    <option value="3">30-34</option>
+                    <option value="4">35-39</option>
+                    <option value="5">40-44</option>
+                    <option value="6">45-49</option>
+                    <option value="7">50-54</option>
+                    <option value="8">55-59</option>
+                    <option value="9">60-64</option>
+                    <option value="10">65-69</option>
+                    <option value="11">70-74</option>
+                    <option value="12">75-79</option>
+                    <option value="13">80+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Walking Difficulty</label>
+                <select name="DiffWalk" required>
+                    <option value="0">No difficulty</option>
+                    <option value="1">Any difficulty</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="cta-button">Analyze Risk Type</button>
+        </div>
+    </form>
+
+    {% if result %}
+    <div class="diagnosis-result {{ result.diagnosis|lower|replace(' ', '-') }}">
+        <h3>Diagnosis: {{ result.diagnosis }}</h3>
+        <div class="recommendations">
+            <h4>Recommended Actions:</h4>
+            <div class="recommendation-content">
+                {{ result.recommendations|replace('\n', '<br>')|safe }}
+            </div>
+        </div>
+
+        <div class="medical-disclaimer">
+            <p>⚠️ This analysis should be reviewed with a healthcare provider.
+                Results based on statistical patterns, not individual medical history.</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

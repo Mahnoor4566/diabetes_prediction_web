@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Diabetes Risk Assessment{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <a href="{{ url_for('home') }}" class="nav-brand">🏠 Home</a>
+            </div>
+
+            <div class="sidebar-links">
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('predict') }}" class="sidebar-link">📊 Predict</a>
+                    <a href="{{ url_for('detailed_prediction') }}" class="sidebar-link">🔍 Detailed Analysis</a>
+                    <a href="{{ url_for('chatbot_page') }}" class="sidebar-link">🤖 Health Assistant</a>
+                    <a href="{{ url_for('education') }}" class="sidebar-link">📚 Diabetes Education</a>
+                    <div class="sidebar-spacer"></div>
+                    <a href="{{ url_for('logout') }}" class="sidebar-link logout-btn">🚪 Logout</a>
+                {% endif %}
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Content Block -->
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

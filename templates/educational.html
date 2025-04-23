@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+{% block title %}Diabetes Education - Diabetes Prediction{% endblock %}
+
+{% block content %}
+<div class="education-container">
+    <h1>Understanding Diabetes</h1>
+    
+    <!-- Main Sections -->
+    <div class="education-grid">
+        <!-- Prevention Card -->
+        <div class="edu-card">
+            <h2>🛡️ Prevention Tips</h2>
+            <ul class="prevention-list">
+                <li>Maintain healthy weight</li>
+                <li>Exercise 30 mins/day</li>
+                <li>Limit processed sugars</li>
+                <li>Regular health checkups</li>
+            </ul>
+            <div class="resource-link">
+                <a href="https://www.cdc.gov/diabetes/prevention/index.html" target="_blank">
+                    CDC Prevention Guide ↗
+                </a>
+            </div>
+        </div>
+
+        <!-- Symptoms Card -->
+        <div class="edu-card">
+            <h2>⚠️ Common Symptoms</h2>
+            <div class="symptoms-grid">
+                <div class="symptom-item">Excessive Thirst</div>
+                <div class="symptom-item">Frequent Urination</div>
+                <div class="symptom-item">Blurred Vision</div>
+                <div class="symptom-item">Slow Healing</div>
+            </div>
+        </div>
+
+        <!-- In education.html video section -->
+<div class="edu-card video-card">
+    <h2>📺 Educational Video</h2>
+    <div class="video-wrapper">
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/sTgBvJsHcCk"
+            title="Understanding Diabetes"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="video-source">
+        Source: <a href="https://diabetes.org" target="_blank">American Diabetes Association</a>
+    </div>
+</div>
+
+        <!-- Management Card -->
+        <div class="edu-card">
+            <h2>💊 Daily Management</h2>
+            <ul class="management-list">
+                <li>Blood sugar monitoring</li>
+                <li>Medication adherence</li>
+                <li>Foot care routine</li>
+                <li>Stress management</li>
+            </ul>
+            <div class="download-section">
+                <a href="https://www.healthquality.va.gov/guidelines/CD/diabetes/Diabetes-Self-Care-Guide-2Jan2024.pdf" target="_blank" download>
+                    📥 Download Guide
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="resource-links">
+    <h3>More Helpful Videos</h3>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=4o2-M1C6T5I" target="_blank">Nutrition Guide for Diabetes</a></li>
+        <li><a href="https://www.youtube.com/watch?v=s2x4JTa-vpc" target="_blank">Exercise Recommendations</a></li>
+        <li><a href="https://www.youtube.com/watch?v=UznxKiHrNx4" target="_blank">Understanding Blood Sugar Levels</a></li>
+    </ul>
+</div>
+<!-- Updated FAQ Section in education.html -->
+<div class="faq-section">
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <!-- Existing FAQ -->
+    <div class="faq-item">
+        <h3>Can diabetes be cured? <span class="toggle">+</span></h3>
+        <div class="faq-answer">
+            <p><strong>Medical Consensus (ADA 2023):</strong><br>
+            - Type 1: No cure, managed with insulin<br>
+            - Type 2: Remission possible through sustained weight loss (10-15% body weight) and lifestyle changes<br>
+            - Gestational: Usually resolves post-pregnancy but increases Type 2 risk by 50%</p>
+            <div class="source">Source: <em>Diabetes Care Journal, Vol 46</em></div>
+        </div>
+    </div>
+
+    <!-- New FAQs -->
+    <div class="faq-item">
+        <h3>What foods help manage blood sugar? <span class="toggle">+</span></h3>
+        <div class="faq-answer">
+            <p><strong>ADA Recommended Foods:</strong><br>
+            1. Non-starchy veggies (broccoli, spinach)<br>
+            2. Whole grains (quinoa, oats)<br>
+            3. Lean proteins (fish, tofu)<br>
+            4. Healthy fats (avocados, nuts)<br>
+            5. Low-glycemic fruits (berries, apples)</p>
+            <div class="source">Source: <em>ADA Nutrition Guidelines</em></div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>What A1C level indicates diabetes? <span class="toggle">+</span></h3>
+        <div class="faq-answer">
+            <p><strong>Diagnosis Criteria (WHO):</strong><br>
+            - Normal: Below 5.7%<br>
+            - Prediabetes: 5.7% to 6.4%<br>
+            - Diabetes: 6.5% or higher<br>
+            <span class="warning">※ Test every 3-6 months if diagnosed</span></p>
+            <div class="source">Source: <em>World Health Organization</em></div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can stress cause diabetes? <span class="toggle">+</span></h3>
+        <div class="faq-answer">
+            <p><strong>Mechanism:</strong><br>
+            - Chronic stress → Increased cortisol → Insulin resistance<br>
+            - 68% higher Type 2 risk in high-stress jobs (Johns Hopkins Study)<br>
+            - Stress management reduces HbA1c by 0.5% on average</p>
+            <div class="source">Source: <em>Diabetes UK Research</em></div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is gestational diabetes permanent? <span class="toggle">+</span></h3>
+        <div class="faq-answer">
+            <p><strong>Postpartum Guidance:</strong><br>
+            - Usually resolves after delivery<br>
+            - 50% develop Type 2 within 10 years<br>
+            - Required: Annual glucose test + Mediterranean diet</p>
+            <div class="source">Source: <em>CDC Diabetes Pregnancy Guidelines</em></div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}Select Gender{% endblock %}
+
+{% block content %}
+<div class="gender-container">
+    <div class="gender-header">
+        <h1 class="gender-title">Let's Get Started</h1>
+        <p class="gender-subtitle">Select your biological sex for personalized assessment</p>
+    </div>
+
+    <form method="POST" action="{{ url_for('predict') }}" class="gender-form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+        <div class="gender-grid">
+            <!-- Female Card -->
+            <label class="gender-card">
+                <input type="radio" name="gender" value="female" required class="gender-input">
+                <div class="gender-content">
+                    <div class="gender-icon">♀</div>
+                    <h3 class="gender-label">Female</h3>
+                    <div class="gender-hover"></div>
+                </div>
+            </label>
+
+            <!-- Male Card -->
+            <label class="gender-card">
+                <input type="radio" name="gender" value="male" class="gender-input">
+                <div class="gender-content">
+                    <div class="gender-icon">♂</div>
+                    <h3 class="gender-label">Male</h3>
+                    <div class="gender-hover"></div>
+                </div>
+            </label>
+        </div>
+
+        <div class="gender-disclaimer">
+            <svg class="info-icon" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <span>We ask for biological sex to provide accurate medical assessment based on physiological differences.</span>
+        </div>
+
+        <button type="submit" class="gender-submit">
+            Continue
+            <svg class="arrow-icon" viewBox="0 0 24 24">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+            </svg>
+        </button>
+    </form>
+</div>
+
+<style>
+/* ========== Gender Selection Styles ========== */
+.gender-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.gender-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gender-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.gender-subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.gender-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.gender-card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gender-card:hover .gender-content {
+    border-color: #4ecdc4;
+}
+
+.gender-input {
+    position: absolute;
+    opacity: 0;
+}
+
+.gender-input:checked + .gender-content {
+    border-color: #4ecdc4;
+    background: rgba(78, 205, 196, 0.05);
+}
+
+.gender-input:checked + .gender-content .gender-icon {
+    transform: scale(1.1);
+    color: #4ecdc4;
+}
+
+.gender-content {
+    padding: 2.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.gender-icon {
+    font-size: 4rem;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.gender-label {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.gender-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(255,255,255,0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gender-card:hover .gender-hover {
+    opacity: 1;
+}
+
+.gender-disclaimer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin: 2rem 0;
+    color: #7f8c8d;
+}
+
+.info-icon {
+    width: 24px;
+    height: 24px;
+    fill: #7f8c8d;
+    flex-shrink: 0;
+}
+
+.gender-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding: 1.2rem;
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gender-submit:hover {
+    background: #45b7af;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media (max-width: 768px) {
+    .gender-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gender-content {
+        padding: 2rem;
+    }
+
+    .gender-title {
+        font-size: 1.8rem;
+    }
+}
+</style>
+{% endblock %}
