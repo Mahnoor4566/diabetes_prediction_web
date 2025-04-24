@@ -1,0 +1,337 @@
+{"intents": [{"tag": "greeting", "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"], "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"], "context_set": ""}, {
+      "tag": "diabetes100",
+      "patterns": [
+        "Can diabetes be cured?",
+        "Is diabetes reversible?",
+        "Can you get rid of diabetes?",
+        "Is there a cure for diabetes?"
+      ],
+      "responses": [
+        "Type 1 diabetes requires lifelong insulin management. Type 2 diabetes can enter remission through sustained weight loss (10-15% body weight) and lifestyle changes. Gestational diabetes usually resolves after pregnancy but increases Type 2 risk.",
+        "While there's no cure for Type 1, Type 2 diabetes can be managed to remission through weight loss, diet, and exercise. Always consult your healthcare provider."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diabetes101",
+      "patterns": [
+        "What foods help manage blood sugar?",
+        "What foods help manage blood sugar",
+        "Best foods for diabetes?",
+        "Best foods for diabetes",
+        "What should I eat with diabetes?",
+        "Diabetes-friendly foods"
+      ],
+      "responses": [
+        "ADA recommends: Non-starchy vegetables (broccoli, spinach), whole grains (quinoa, oats), lean proteins (fish, tofu), healthy fats (avocados, nuts), and low-glycemic fruits (berries, apples).",
+        "Focus on non-starchy veggies, whole grains, lean proteins, and healthy fats. Limit processed foods and added sugars."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diabetes102",
+      "patterns": [
+        "What A1C level indicates diabetes?",
+        "Normal A1C range?",
+        "A1C diagnosis levels",
+        "Diabetes A1C numbers"
+      ],
+      "responses": [
+        "WHO classification: Normal <5.7%, Prediabetes 5.7-6.4%, Diabetes ≥6.5%. Get tested every 3-6 months if diagnosed.",
+        "A1C levels: Normal (below 5.7), Prediabetes (5.7-6.4), Diabetes (6.5+). Regular monitoring is crucial."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diabetes103",
+      "patterns": [
+        "Can stress cause diabetes?",
+        "Stress and diabetes link?",
+        "Does stress affect blood sugar?",
+        "Diabetes from stress?"
+      ],
+      "responses": [
+        "Chronic stress increases cortisol leading to insulin resistance. Studies show 68% higher Type 2 risk in high-stress jobs. Stress management can lower HbA1c.",
+        "While stress doesn't directly cause diabetes, chronic stress increases diabetes risk through hormonal changes and insulin resistance."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "diabetes104",
+      "patterns": [
+        "Is gestational diabetes permanent?",
+        "Does gestational diabetes go away?",
+        "Pregnancy diabetes long-term effects",
+        "Gestational diabetes after birth"
+      ],
+      "responses": [
+        "Gestational diabetes usually resolves post-delivery but brings 50% Type 2 risk within 10 years. Annual glucose tests and Mediterranean diet recommended.",
+        "While gestational diabetes typically ends after pregnancy, it requires lifelong monitoring as half develop Type 2 diabetes later."
+      ],
+      "context_set": ""
+    },{"tag": "goodbye", "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"], "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"], "context_set": ""}, {"tag": "age", "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"], "responses": ["I am 27 years old!", "27 years young!"], "context_set": ""}, {"tag": "name", "patterns": ["what is your name", "what should I call you", "whats your name?"], "responses": ["You can call me Pointer.", "I'm pointer!"], "context_set": ""}, {"tag": "shop", "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"], "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"], "context_set": ""}, {"tag": "hours", "patterns": ["when are you guys open", "what are your hours", "hours of operation"], "responses": ["We are open 7am-4pm Monday-Friday!"], "context_set": ""}, {"tag": "diabetes0", "patterns": ["how many types of diabetes are there"], "responses": ["There are three main types of diabetes   type 1, type 2 and gestational. Type 1 diabetes can develop at any age, but occurs most frequently in children and adolescents."], "context_set": ""}, {"tag": "diabetes1", "patterns": ["can a child have diabetes"], "responses": ["Type 2 diabetes in children is a chronic disease that affects the way your child's body processes sugar (glucose). Without treatment, the disorder causes sugar to build up in the blood, which can lead to serious long-term consequences. Type 2 diabetes occurs more commonly in adults."], "context_set": ""}, {"tag": "diabetes2", "patterns": ["is it possible to control diabetes without medicine"], "responses": ["Although there's no cure for type 2 diabetes, studies show it's possible for some people to reverse it. Through diet changes and weight loss, you may be able to reach and hold normal blood sugar levels without medication. This doesn't mean you're completely cured."], "context_set": ""}, {"tag": "diabetes3", "patterns": ["What should my blood sugar be?"], "responses": ["The American Diabetes Association recommends a blood glucose range of 80-130 before meals and less than 180 about 2 hours after a meal. This range should place your A1c under 7."], "context_set": ""}, {"tag": "diabetes4", "patterns": ["What is an A1c?"], "responses": [" A Hemoglobin A1c is a 2-3 month average of your blood sugars. This result gives you a good idea of how well your diabetes is being managed/controlled. The American Diabetes Association recommends an A1c of less than 7 to keep the risk of complications low."], "context_set": ""}, {"tag": "diabetes5", "patterns": ["What can I eat if I have diabetes?"], "responses": ["You can eat just about anything you want. It is about knowing proper portion sizes and how much you are putting on your plate. A dietitian can help you learn to count carbohydrates and with meal planning that is specific for you."], "context_set": ""}, {"tag": "diabetes6", "patterns": ["Why does it matter if my blood sugar is 120 or 200?"], "responses": ["It is very important to keep your blood sugar level under control. When your blood sugar level is high, it can cause damage in your veins and arteries. This damage could lead to complications later such as heart attacks, strokes, kidney disease, neuropathies, vision problems, etc. "], "context_set": ""}, {"tag": "diabetes7", "patterns": ["What foods have carbohydrates?"], "responses": ["Fruits, starchy vegetables, milk, yogurt, rice, cereals, bread and other grains all have carbs and give you important nutrients. Many snack foods, such as pretzels, chips and popcorn, have carbs. Sweets, including regular soda, cakes, candy and cookies, also contain carbohydrates. Be sure to check the nutrition label on each food item to determine carbohyrdate content."], "context_set": ""}, {"tag": "diabetes8", "patterns": ["Do I need to follow a low carb diet?"], "responses": ["Carbohydrates are an important part of a healthy diet. With diabetes, watching portion sizes and getting most of your carbs from fruits, vegetables, whole grains and low fat milk and yogurt is key. Besides counting carbs, people with diabetes can also benefit from eating lower fat, high fiber foods and just enough calories to maintain a healthy weight."], "context_set": ""}, {"tag": "diabetes9", "patterns": ["If it is sugar free, I can eat as much as I want, right?"], "responses": ["ugar free foods can be part of a healthy meal plan in small amounts. Keep in mind though that some of these foods still have carbs (in the form of other sweeteners such as sorbitol, isomalt, and mannitol) and may affect your blood glucose levels. Many sugar free foods have calories and carbohydrates and lots of fat. Make sure you read the nutrition labels."], "context_set": ""}, {"tag": "diabetes10", "patterns": ["What resources are available to help me control my diabetes?  "], "responses": ["Diabetes classes are offered by Maury Regional Health and can be scheduled by your provider at with a certified diabetes educator and/or dietitian. This class is recognized by the American Diabetes Association."], "context_set": ""}, {"tag": "diabetes11", "patterns": ["When do you check your glucose?"], "responses": ["The common times for checking your blood sugar are when you first wake up (fasting), before a meal, 2 hours after a meal, and at bedtime. Talk with your health care team about what times are best for you to check your blood sugar."], "context_set": ""}, {"tag": "diabetes12", "patterns": ["Diabetes symptoms?"], "responses": ["Urinate (pee) a lot, often at night , Are very thirsty , Lose weight without trying , Are very hungry , Have blurry vision , Have numb or tingling hands or feet , Feel very tired , Have very dry skin , Have sores that heal slowly , Have more infections than usual "], "context_set": ""}, {"tag": "diabetes13", "patterns": ["Symptoms of Type 1 Diabetes"], "responses": ["People who have type 1 diabetes may also have nausea, vomiting, or stomach pains. Type 1 diabetes symptoms can develop in just a few weeks or months and can be severe. Type 1 diabetes usually starts when you re a child, teen, or young adult but can happen at any age."], "context_set": ""}, {"tag": "diabetes14", "patterns": ["Symptoms of Type 2 Diabetes"], "responses": ["Type 2 diabetes symptoms often take several years to develop. Some people don t notice any symptoms at all. Type 2 diabetes usually starts when you re an adult, though more and more children and teens are developing it. Because symptoms are hard to spot, it s important to know the risk factors for type 2 diabetes. Make sure to visit your doctor if you have any of them."], "context_set": ""}, {"tag": "diabetes15", "patterns": ["Symptoms of Gestational Diabetes"], "responses": ["Gestational diabetes (diabetes during pregnancy) usually doesn t have any symptoms. If you re pregnant, your doctor should test you for gestational diabetes between 24 and 28 weeks of pregnancy. If needed, you can make changes to protect your health and your baby s health."], "context_set": ""}, {"tag": "diabetes16", "patterns": ["Medications for type 1 diabetes"], "responses": ["Insulin , Short-acting insulin , Rapid-acting insulins , Intermediate-acting insulin , Long-acting insulins , Combination insulins"], "context_set": ""}, {"tag": "diabetes17", "patterns": ["if i get diabetes will i die"], "responses": ["Diabetes can lead to serious complications which can affect many different parts of your body. In the worst cases, diabetes can kill you. Each week diabetes causes thousands of complications like stroke, amputation, kidney failure, heart attack and heart failure."], "context_set": ""}, {"tag": "diabetes18", "patterns": ["Can diabetics live a long life?"], "responses": ["Type 2 diabetes is a serious condition that can lead to life-threatening complications. However, by adopting effective management strategies, there is a good chance that many people with type 2 diabetes can expect to live as long as a person without the condition."], "context_set": ""}, {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I'm sorry, I didn't understand that. Here are some common questions:",
+        "I'm still learning! Try one of these questions:",
+        "Let me connect you to relevant information:"
+      ],
+      "suggestions": [
+        "What foods help manage blood sugar?",
+        "Can diabetes be cured?",
+        "What A1C level indicates diabetes?",
+        "Is gestational diabetes permanent?",
+        "How often should I check my glucose?",
+        "What are symptoms of Type 2 diabetes?"
+      ]
+    }, {"tag": "diabetes19", "patterns": ["Can 20 year olds get diabetes?"], "responses": ["People can develop type 1 diabetes at any age, from early childhood to adulthood, but the average age at diagnosis is 13 years. An estimated 85% of all type 1 diagnoses take place in people aged under 20 years."], "context_set": ""}, {"tag": "diabetes20", "patterns": ["Who is most at risk of diabetes?"], "responses": ["are overweight or obese. , are age 45 or older. , have a family history of diabetes. , are African American, Alaska Native, American Indian, Asian American, Hispanic/Latino, Native Hawaiian, or Pacific Islander. , have high blood pressure"], "context_set": ""}, {"tag": "diabetes21", "patterns": ["Can diabetics drink alcohol?"], "responses": ["Drink in Moderation"], "context_set": ""}, {"tag": "diabetes22", "patterns": ["What is the youngest age to get diabetes?"], "responses": ["It used to be called juvenile diabetes because most of the people who got it were young children. Your child could get type 1 diabetes as an infant, or later, as a toddler or a teen. Most often, it appears after age 5. But some people don't get it until their late 30s."], "context_set": ""}, {"tag": "diabetes23", "patterns": ["Can eating too much sugar cause diabetes?"], "responses": ["Excessive amounts of added sugars have been associated with an increased risk of type 2 diabetes, likely due to negative effects on the liver and a higher risk of obesity. Natural sugars like those found in fruits and vegetables are not linked to diabetes risk   whereas artificial sweeteners are."], "context_set": ""}, {"tag": "diabetes24", "patterns": ["Can diabetics eat pizza?"], "responses": ["Pizza may actually be a good choice for people with type 2 diabetes; just be sure to order the thin-crust type and top it with vegetables rather than high-fat meats and extra cheese. It's also a good idea to watch portion sizes."], "context_set": ""}, {"tag": "diabetes25", "patterns": ["What diet causes diabetes?"], "responses": ["A diet high in fat, calories, and cholesterol increases your risk of diabetes. A poor diet can lead to obesity (another risk factor for diabetes) and other health problems. A healthy diet is high in fiber and low in fat, cholesterol, salt, and sugar."], "context_set": ""}, {"tag": "diabetes26", "patterns": ["Does exercise reverse diabetes?"], "responses": ["Exercise helps the body to become more sensitive to its insulin. In combination with a healthy diet, exercise can reduce the demand for insulin in the body and therefore help reverse diabetes."], "context_set": ""}, {"tag": "diabetes27", "patterns": ["Is 200 blood sugar normal after eating?"], "responses": ["Less than 140 mg/dL (7.8 mmol/L) is normal. 140 to 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) is diagnosed as prediabetes. 200 mg/dL (11.1 mmol/L) or higher after two hours suggests diabetes."], "context_set": ""}, {"tag": "diabetes28", "patterns": ["Is 216 blood sugar high?"], "responses": ["fasting blood sugar of 126 mg/dL or higher = diabetes. fasting blood sugar of 100 to 125 mg/dL = prediabetes. fasting blood sugar less than 100 mg/dL = normal."], "context_set": ""}, {"tag": "diabetes29", "patterns": ["What happens when your blood sugar is 300?"], "responses": ["A reading above 300 mg/dL can be dangerous, according to the University of Michigan, which recommends immediately informing your doctor if you have two or more readings of 300 mg/dL in a row. In severe cases, very high blood sugar levels (well above 300 mg/dL) can result in coma."], "context_set": ""}, {"tag": "diabetes30", "patterns": ["At what sugar level is diabetic coma?"], "responses": ["A diabetic coma could happen when your blood sugar gets too high -- 600 milligrams per deciliter (mg/dL) or more -- causing you to become very dehydrated. It usually affects people with type 2 diabetes that isn't well-controlled."], "context_set": ""}, {"tag": "diabetes31", "patterns": ["When should a diabetic go to hospital?"], "responses": ["You should call your doctor if you have high blood sugar levels throughout the day, if you find your blood sugar level is always high at the same time each day, or if you are having symptoms of high blood sugar like drinking or urinating (peeing) a lot more than normal."], "context_set": ""}, {"tag": "diabetes32", "patterns": ["How long does a diabetic patient live?"], "responses": ["The combined diabetic life expectancy is 74.64 years comparable to the life expectancy in the general population."], "context_set": ""}, {"tag": "diabetes33", "patterns": ["Can a 23 year old get diabetes?"], "responses": ["It might seem surprising that someone so young could develop type 2 diabetes, but the disease is on the rise among the under-30 set. In fact, 5.7 percent of all new cases of diabetes occur in people between 18 and 29, the U.S. Centers for Disease Control and Prevention estimates."], "context_set": ""}, {"tag": "diabetes34", "patterns": ["Can diabetes start suddenly?"], "responses": ["Over time, as the insulin in your body is sapped with no new supply being produced to replace it, symptoms begin to appear and accelerate. When you reach a point where there's no insulin and too much accumulated glucose in your bloodstream, type 1 diabetes symptoms develop rapidly and have to be addressed immediately."], "context_set": ""}, {"tag": "diabetes35", "patterns": ["What does sugar in urine look like?"], "responses": ["The sugar is then excreted in your urine. The excess sugar can make it appear cloudy or even smell sweet or fruity. For some people, this is the first sign of diabetes. If you suddenly notice cloudy urine that smells sweet, see a doctor right away."], "context_set": ""}, {"tag": "diabetes36", "patterns": ["How often do you pee diabetes?"], "responses": ["People with diabetes tend to urinate a lot more than the average person - who normally urinates four to seven times in 24 hours. For someone who doesn't have diabetes, the body reabsorbs glucose as it passes through the kidneys"], "context_set": ""}, {"tag": "diabetes37", "patterns": ["Is drinking water good for diabetes?"], "responses": ["When it comes to hydration, water is the best option for people with diabetes. That's because it won't raise your blood sugar levels. High blood sugar levels can cause dehydration. Drinking enough water can help your body eliminate excess glucose through urine."], "context_set": ""}, {"tag": "diabetes38", "patterns": ["Can diabetes be cured by exercise?"], "responses": ["People with Type 2 diabetes can reverse their condition with diet and exercise, although remission is not very common, according to a new study from the Centers for Disease Control and Prevention."], "context_set": ""}, {"tag": "diabetes39", "patterns": ["Is jogging good for diabetes?"], "responses": ["Running can be an ideal form of exercise for people with diabetes as it helps improve the body's sensitivity to insulin. This can be especially useful for people with type 2 diabetes to help combat insulin resistance."], "context_set": ""}, {"tag": "diabetes40", "patterns": ["What is the best time to exercise for diabetics?"], "responses": ["Those with type 2 diabetes are supposed to keep levels at 160 mg/dl within two hours of a meal. Because exercising reduces blood glucose concentrations, it's a good idea to start exercising about 30 minutes after the beginning of a meal, researchers concluded."], "context_set": ""}, {"tag": "diabetes41", "patterns": ["Does cycling reduce diabetes?"], "responses": ["The study shows that those who start cycling late (on average) get a 20% reduction in the risk of diabetes. The beneficial effects of two-wheelers emerge independently of other factors that may affect the risk of disease, such as nutrition, weight problems."], "context_set": ""}, {"tag": "diabetes42", "patterns": ["How much should diabetics walk?"], "responses": ["Benefits. By walking every day for 30 minutes to an hour, people with diabetes can reap the following benefits: Improved glucose control.  Exercise helps muscles absorb blood sugar, preventing it from building up in the bloodstream."], "context_set": ""}, {"tag": "diabetes43", "patterns": ["How do you bring your blood sugar down quickly?"], "responses": ["When your blood sugar level gets too high   known as hyperglycemia or high blood glucose   the quickest way to reduce it is to take fast-acting insulin. Exercising is another fast, effective way to lower blood sugar."], "context_set": ""}, {"tag": "diabetes44", "patterns": ["What foods help get rid of diabetes?"], "responses": ["Non-Starchy Vegetables. Non-starchy vegetables are one of the best foods you can eat as a diabetic.,Leafy Greens.,Fatty Fish.,Nuts and Eggs.,Seeds.,Natural Fats.,Apple Cider Vinegar.,Cinnamon and Turmeric."], "context_set": ""}, {"tag": "diabetes45", "patterns": ["Can walking 30 minutes a day lower blood sugar?"], "responses": ["Good news: Two new studies found that exercising 30 minutes a day reduces your risk of diabetes by 25 percent, and walking for 10 minutes after meals lowers your blood sugar by 22 percent."], "context_set": ""}, {"tag": "diabetes46", "patterns": ["Does turmeric lower blood sugar?"], "responses": ["Turmeric may help manage high glucose levels in your blood. The spice was shown to increase insulin sensitivity, which leads to lower blood sugar levels."], "context_set": ""}, {"tag": "diabetes47", "patterns": ["Is rice good for diabetes?"], "responses": ["Rice is rich in carbohydrates and can have a high GI score. If you have diabetes, you may think that you need to skip it at dinner, but this isn't always the case. You can still eat rice if you have diabetes. You should avoid eating it in large portions or too frequently, though."], "context_set": ""}, {"tag": "diabetes48", "patterns": ["Will boiled eggs lower blood sugar?"], "responses": ["A hard-boiled egg is a handy high-protein snack if you have diabetes. The protein will help keep you full without affecting your blood sugar. Protein not only slows digestion, it also slows glucose absorption. This is very helpful if you have diabetes."], "context_set": ""}, {"tag": "diabetes49", "patterns": ["Is Potato bad for diabetes?"], "responses": ["Eating too many potatoes can present problems for blood sugar control in people with diabetes. However, potatoes are a good source of vitamins, minerals, and fiber, and people with diabetes can enjoy them as part of a healthful diet."], "context_set": ""}, {"tag": "diabetes50", "patterns": ["Can we eat Maida in diabetes?"], "responses": ["Over consumption of maida is linked with constipation. The glycemic index of maida is very high. It is not suitable to patients suffering from diabetes and obesity."], "context_set": ""}, {"tag": "diabetes51", "patterns": ["Is bread bad for diabetics?"], "responses": ["Contrary to popular belief, people with type 2 diabetes can, in fact, eat bread   the right kinds, in moderation. The American Diabetes Association (ADA) puts it this way:  Starchy foods can be part of a healthy meal plan, but portion size is key."], "context_set": ""}, {"tag": "diabetes52", "patterns": ["Is Chicken Good for diabetes?"], "responses": ["Chicken can be a great option for people with diabetes. All cuts of chicken are high in protein and many are low in fat. When prepared in a healthy way, chicken can be a great ingredient in a healthy diabetic eating plan."], "context_set": ""}, {"tag": "diabetes53", "patterns": ["Can diabetics eat carrots?"], "responses": ["Uncontrolled blood sugar levels can lead to type 2 diabetes or worsen your disease. Carrots can be a safe choice if you have diabetes and are watching your blood sugar levels. They're also non-starchy vegetables. So you can even enjoy small amounts of carrots if you're following the ketogenic, or keto, diet."], "context_set": ""}, {"tag": "diabetes54", "patterns": ["Can a diabetic eat chips?"], "responses": ["You may love their lip-smackin' saltiness, but potato chips, tortilla chips, or corn chips (including those in restaurant nachos), crackers, and pretzels are not the best food choices for people living with diabetes."], "context_set": ""}, {"tag": "diabetes55", "patterns": ["Is papaya good for diabetes?"], "responses": ["Papaya isn't only a good choice for people with diabetes because of its medium GI. Eating papaya might also lower your blood sugar. According to some reports , papaya may have a hypoglycemic effect on the body. The fruit contains flavonoids, which are natural antioxidants that may help regulate blood sugar."], "context_set": ""}, {"tag": "diabetes56", "patterns": ["Can diabetic patient eat Maggi?"], "responses": ["Eating maggie is not a good option as it is loaded with refined carbs, bad fats, preservatives. It wont just affect your sugar at that moment but will have long term effects also"], "context_set": ""}, {"tag": "diabetes57", "patterns": ["Can diabetics eat butter?"], "responses": ["Eating butter in moderation is safe for those with diabetes. Choosing real butter instead of margarine will decrease trans fat intake and have a better overall impact on heart health and diabetes management. Since butter is a saturated fat, being mindful of total daily intake is important"], "context_set": ""}, {"tag": "diabetes58", "patterns": ["Can diabetics drink lemonade?"], "responses": ["Your best bet is to make lemonade at home. Mix water, fresh-squeezed lemons, zero-calorie sweetener, and ice for a truly refreshing beverage without a single carb or calorie in sight."], "context_set": ""}, {"tag": "diabetes59", "patterns": ["Which biscuit is good for diabetes?"], "responses": ["Nutrichoice Essentials are diabetic-friendly biscuits from Britannia. They are available in Oats and Ragi variants in On the Go Convenient packs. They *help manage blood sugar levels and are diabetic friendly as they have: High dietary fibre."], "context_set": ""}, {"tag": "diabetes60", "patterns": ["Is yogurt OK for diabetics?"], "responses": ["Yogurts that contain a total carbohydrate content of 15 g or less per serving are ideal for people with diabetes. Look for yogurts that are high in protein and low in carbohydrates, such as unflavored Greek yogurt."], "context_set": ""}, {"tag": "diabetes61", "patterns": ["Can diabetics eat ice cream?"], "responses": ["DIABETICS, YOU CAN EAT ICE CREAM AND THIS IS THE BEST WAY TO EAT IT: People who have diabetes usually think ice cream is off limits for them. While it is true since most varieties available in the market are high in sugar, which can raise your blood sugar levels rapidly"], "context_set": ""}, {"tag": "diabetes62", "patterns": ["Is coconut water good for diabetes?"], "responses": ["Coconut water is packed with nutrients and minerals along with having a low glycemic index. What's more, it is delicious and absolutely natural! Due to all these reasons, it is often recommended for people with diabetes."], "context_set": ""}, {"tag": "diabetes63", "patterns": ["Are dates good for diabetes?"], "responses": ["Dates have a low GI, which means they're less likely to spike your blood sugar levels, making them a safe choice for people with diabetes. Moreover, dates have a medium GL, which means that 1 or 2 fruits at a time are a good choice"], "context_set": ""}, {"tag": "diabetes64", "patterns": ["Is idli good for diabetic?"], "responses": ["Fibre-rich, high in nutritional value and with a low glycemic index, Oats can be eaten boiled with milk and with vegetables. Oats dosas, idlis and pancakes work well with the Indian palate. Eating them regularly has known to decrease insulin resistance in diabetics."], "context_set": ""}, {"tag": "diabetes65", "patterns": ["s Almond good for diabetics?"], "responses": ["Almonds are a good mid time snack for a diabetic patient. The presence of magnesium makes it beneficial for diabetesand controls blood sugar levels. Few studies have been conducted recently which indicates that almonds if consumed in a good quantity for long run can help controlling blood sugars."], "context_set": ""}, {"tag": "diabetes66", "patterns": ["How much water should a diabetic drink daily?"], "responses": ["If you're living with diabetes, you should drink plenty of fluids   about 1.6 liters (L) or 6.5 cups per day for women; and 2 L or 8.5 glasses per day for men."], "context_set": ""}, {"tag": "diabetes67", "patterns": ["What drink lowers blood sugar?"], "responses": ["Pomegranate juice is said to help lower blood sugar levels within 15 minutes of drinking it. A study examined the effects one drink of the juice could have on a diabetic and found it changed the levels of their blood sugar - in a good way."], "context_set": ""}, {"tag": "diabetes68", "patterns": ["Are ginger biscuits good for diabetics?"], "responses": ["Ginger can be an effective addition to your diabetes treatment if you use it in moderation. Eating up to 4 grams per day may help lower your blood sugar levels and regulate insulin production. Be sure to talk with your doctor before adding this to your treatment regimen."], "context_set": ""}, {"tag": "diabetes69", "patterns": ["Can diabetes be cured permanently by Yoga?"], "responses": ["However, diabetes can be controlled to such an extent that you may not need medication but it cannot be cured, even through yoga."], "context_set": ""}, {"tag": "diabetes70", "patterns": ["Which yoga is best for diabetes?"], "responses": ["Walking. Cycling. Swimming. Team sports. Aerobic dance. Weightlifting. Resistance band exercises. Calisthenics."], "context_set": ""}, {"tag": "diabetes71", "patterns": ["Can Ramdev cure diabetes?"], "responses": ["According to Swami Ramdev, diabetes can be easily overcome by doing 5 pranayamas and 5 yoga asanas daily. These yoga tips will help get rid of all types of diabetes by staying at home. Along with these Yogasanas, drink a kada (decoction) of Giloy, Basil, Pepper and Ashwagandha."], "context_set": ""}, {"tag": "diabetes72", "patterns": ["Will surya namaskar reduce diabetes?"], "responses": ["Surya Namaskar (sun salutations)Surya Namaskar is an extremely beneficial yoga practice for people suffering from diabetes as it improves the blood circulation and the management of insulin in the body. If performed at a slow pace (six rounds a minute), these asanas work best to give you major benefits."], "context_set": ""}, {"tag": "diabetes73", "patterns": ["Does yoga increase blood sugar?"], "responses": ["Exercising the muscles   Like other forms of exercise, yoga increases glucose uptake by muscular cells, which in turn, helps to lower blood sugar levels, improve circulation and reduce the risk of cardiovascular disease."], "context_set": ""}, {"tag": "diabetes74", "patterns": ["What does Ayurveda say about diabetes?"], "responses": ["According to Ayurveda, a body is in its healthiest state if and when Vata, Pitta and Kapha are in balance. Any imbalance will lead to health ailments. Diabetes is essentially cause by the imbalance of Pitta in the body."], "context_set": ""}, {"tag": "diabetes75", "patterns": ["How can I improve my pancreas naturally?"], "responses": ["To get your pancreas healthy, focus on foods that are rich in protein, low in animal fats, and contain antioxidants. Try lean meats, beans and lentils, clear soups, and dairy alternatives (such as flax milk and almond milk). Your pancreas won't have to work as hard to process these."], "context_set": ""}, {"tag": "diabetes76", "patterns": ["Can yoga cure Type 1 diabetes?"], "responses": ["Yoga not only increases blood supply throughout the body, improving insulin administration but also builds muscles and reduces stress; key things that are essential if you live with type 1 diabetes."], "context_set": ""}, {"tag": "diabetes77", "patterns": ["Can yoga reverse Type 2 diabetes?"], "responses": ["The results of one 2016 review found that yogic practices can significantly help to manage type 2 diabetes. Researchers concluded that yoga had a positive improvement on blood sugar levels, lipid levels, and body composition."], "context_set": ""}, {"tag": "diabetes78", "patterns": ["Which Pranayama is suitable for diabetes?"], "responses": ["One of the basic preparations for Pranayama is Nadi Shodhan Pranayama or alternate nostril breathing, this type is found useful in diabetes as Alternate nostril breathing has calming effect on nervous system, which reduces stress levels, helping in diabetes treatment."], "context_set": ""}, {"tag": "diabetes79", "patterns": ["How can yoga activate the pancreas naturally?"], "responses": ["Studies have also confirmed that practising certain asanas such as Ardha Matsyendrasana (half-twist pose) combined with Dhanurasana (bow pose), Vakrasana (twisted pose), Matsyendrasana (half-spinal twist), Halasana (plough pose) squeezes and compresses the abdomen and helps stimulate the pancreatic secretions "], "context_set": ""}, {"tag": "diabetes80", "patterns": ["What exercises improve pancreas?"], "responses": ["Short, functional-movement and resistance training workouts, called functional high-intensity training (F-HIT), may improve beta-cell function in adults with type 2 diabetes, new research shows. Beta cells in the pancreas produce, store and secrete insulin, which allows your body to use sugar for energy."], "context_set": ""}, {"tag": "diabetes81", "patterns": ["Which yoga pose is good for pancreas?"], "responses": ["One yoga practice specific to the pancreas is Uddiyana Bandha or the Stomach Lock Pose. This pose puts pressure into the pancreatic area squeezing it tightly."], "context_set": ""}, {"tag": "diabetes82", "patterns": ["Is walking good for pancreas?"], "responses": ["However, we found that the group that practiced walking showed normalization of the endocrine part of the pancreas. Few studies have reported the beneficial effects of physical training on the pancreas alone."], "context_set": ""}, {"tag": "diabetes83", "patterns": ["Is fasting good for the pancreas?"], "responses": ["Fasting is known to cause physiological changes in the endocrine pancreas, including decreased insulin secretion and increased reactive oxygen species (ROS) production."], "context_set": ""}, {"tag": "diabetes84", "patterns": ["How do I know if my pancreas is producing insulin?"], "responses": ["C-peptide and insulin are released from the pancreas at the same time and in about equal amounts. So a C-peptide test can show how much insulin your body is making. This test can be a good way to measure insulin levels because C-peptide tends to stay in the body longer than insulin."], "context_set": ""}, {"tag": "diabetes85", "patterns": ["how to prevent diabetes?"], "responses": ["Lose extra weight. Losing weight reduces the risk of diabetes.,Be more physically active. There are many benefits to regular physical activity.,Eat healthy plant foods. Plants provide vitamins, minerals and carbohydrates in your diet"], "context_set": ""}, {"tag": "diabetes86", "patterns": ["Why do diabetics get so angry?"], "responses": ["Since the hormones that regulate blood sugar also regulate stress levels, when your blood sugar is off, you can become enraged or depressed, which in turn makes it harder to regulate your blood sugar."], "context_set": ""}, {"tag": "diabetes87", "patterns": ["Does diabetes affect memory?"], "responses": ["Uncontrolled diabetes may increase the risk of experiencing cognitive problems, such as memory loss. Higher than normal blood glucose levels can damage nerve cells, supportive glial cells, and blood vessels in both peripheral nerves of the body and the brain."], "context_set": ""}, {"tag": "diabetes88", "patterns": ["How can diabetes affect you emotionally?"], "responses": ["The fear of blood sugar fluctuations can be very stressful. Changes in blood sugar can cause rapid changes in mood and other mental symptoms such as fatigue, trouble thinking clearly, and anxiety. Having diabetes can cause a condition called diabetes distress which shares some traits of stress, depression and anxiety."], "context_set": ""}, {"tag": "diabetes89", "patterns": ["Can diabetes cause strange behavior?"], "responses": ["In diabetes, irrational behavior happens because glucose levels that are too high (hyperglycemia) or, especially, too low (hypoglycemia) impede self-control. When people lack their normal level of self-control, they often: are impulsive. disregard long-term consequences of their actions."], "context_set": ""}, {"tag": "diabetes90", "patterns": ["is a hereditary disease?"], "responses": ["Diabetes is a hereditary disease, which means that the child is at high risk of developing diabetes compared to the general population at the given age. Diabetes can be inherited from either mother or father."], "context_set": ""}, {"tag": "diabetes91", "patterns": ["Which is hereditary type 1 or type 2 diabetes?"], "responses": ["Type 2 diabetes has a stronger link to family history and lineage than type 1, and studies of twins have shown that genetics play a very strong role in the development of type 2 diabetes"], "context_set": ""}, {"tag": "diabetes92", "patterns": ["Can you avoid diabetes if it runs in your family?"], "responses": ["Even if you have a family health history of diabetes, you can prevent or delay type 2 diabetes by eating healthier, being physically active, and maintaining or reaching a healthy weight. This is especially important if you have prediabetes, and taking these steps can reverse prediabetes."], "context_set": ""}, {"tag": "diabetes93", "patterns": ["Can I get diabetes if my grandma has it?"], "responses": ["If there is a history of a type of diabetes in a person's family, they may have a higher risk of developing the same condition. Genetic factors can make some people more vulnerable to some types of diabetes. However, a person may not inherit the condition, and there may be ways to reduce the risk."], "context_set": ""}, {"tag": "diabetes94", "patterns": ["Why do people get diabetes?"], "responses": ["Diabetes is a chronic disease that occurs because the body is unable to use blood sugar (glucose) properly. The exact cause of this malfunction is unknown, but genetic and environmental factors play a part. Risk factors for diabetes include obesity and high levels of cholesterol."], "context_set": ""}, {"tag": "diabetes95", "patterns": ["Does coffee affect blood sugar?"], "responses": ["For most young, healthy adults, caffeine doesn't appear to noticeably affect blood sugar (glucose) levels, and having up to 400 milligrams a day appears to be safe."], "context_set": ""}, {"tag": "diabetes96", "patterns": ["Is milk good for a diabetic?"], "responses": ["Milk Nutrition. Dairy is important for your diet because it's an excellent source of calcium. But it may also be high in fat and carbs, making it risky for people with diabetes."], "context_set": ""}, {"tag": "diabetes97", "patterns": ["What is the miracle fruit that cures diabetes?"], "responses": ["MiraBurst is particularly beneficial for diabetics and borderline diabetics. MiraBurst can help diabetics and pre-diabetics improve their body's sensitivity to their own insulin and manage blood sugar levels."], "context_set": ""}, {"tag": "diabetes98", "patterns": ["Which is worse type 1 or 2 diabetes?"], "responses": ["Type 2 diabetes is often milder than type 1. But it can still cause major health complications, especially in the tiny blood vessels in your kidneys, nerves, and eyes. Type 2 also raises your risk of heart disease and stroke."], "context_set": ""}, {"tag": "diabetes99", "patterns": ["is it possible to get rid of diabetes"], "responses": ["There is no known cure for type 2 diabetes. But it can be controlled. And in some cases, it goes into remission. For some people, a diabetes-healthy lifestyle is enough to control their blood sugar levels."], "context_set": ""}, {
+  "tag": "diabetes105",
+  "patterns": [
+    "How does exercise affect blood sugar?",
+    "Best exercises for diabetes?",
+    "Exercise and diabetes",
+    "Workout impact on glucose"
+  ],
+  "responses": [
+    "Exercise lowers blood glucose by increasing insulin sensitivity. ADA recommends 150 mins/week of moderate activity. Monitor levels before/after exercise. Caution if glucose >250 mg/dL with ketones.",
+    "Aerobic exercise (walking, swimming) and resistance training both improve glycemic control. Aim for 30 mins daily, 5 days/week."
+  ]
+},
+{
+  "tag": "diabetes106",
+  "patterns": [
+    "What are diabetes complications?",
+    "Long-term effects of diabetes",
+    "Diabetes organ damage"
+  ],
+  "responses": [
+    "Uncontrolled diabetes can cause: 1) Retinopathy (vision loss) 2) Nephropathy (kidney failure) 3) Neuropathy (nerve pain) 4) Cardiovascular disease 5) Foot ulcers. Maintaining A1C <7% reduces risks.",
+    "Chronic high blood sugar damages blood vessels. 68% of diabetes deaths are from heart disease. Regular screenings catch complications early."
+  ]
+},
+{
+  "tag": "diabetes107",
+  "patterns": [
+    "How to prevent diabetes?",
+    "Avoid getting diabetes",
+    "Diabetes prevention methods"
+  ],
+  "responses": [
+    "NIH Diabetes Prevention Program shows: 7% weight loss + 150 mins exercise/week reduces Type 2 risk by 58%. Focus on whole foods and activity.",
+    "Prevention strategies: 1) Maintain BMI <25 2) Eat fiber-rich foods 3) Limit processed carbs 4) Walk after meals 5) Annual glucose checks if prediabetic"
+  ]
+},
+{
+  "tag": "diabetes108",
+  "patterns": [
+    "Continuous glucose monitors?",
+    "What is a CGM?",
+    "FreeStyle Libre vs Dexcom"
+  ],
+  "responses": [
+    "CGMs measure tissue glucose every 5 mins. ADA recommends for all insulin users. Top models: Dexcom G7 (no calibration), FreeStyle Libre 3 (14-day wear).",
+    "CGMs help track trends vs single readings. Medicare now covers for Type 2s on intensive insulin. Alerts prevent lows/highs."
+  ]
+},
+{
+  "tag": "diabetes109",
+  "patterns": [
+    "Alcohol and diabetes",
+    "Can I drink with diabetes?",
+    "Beer vs wine for diabetics"
+  ],
+  "responses": [
+    "Max 1 drink/day women, 2 men. Avoid sugary mixers. Check glucose 24h as alcohol delays liver glucose production. Never drink on empty stomach.",
+    "Best choices: Dry wines (4g carbs), light beer (5g), spirits with zero-carb mixers. Always pair with protein/fat."
+  ]
+},
+{
+  "tag": "diabetes110",
+  "patterns": [
+    "Diabetes and COVID risk",
+    "Is diabetes high risk for COVID?",
+    "Vaccines for diabetics"
+  ],
+  "responses": [
+    "CDC notes diabetics have 3x higher COVID hospitalization risk. Prioritize boosters. Maintain glucose <180 mg/dL during infection.",
+    "COVID precautions: 1) Ensure 3-7 day medication supply 2) Hydrate well 3) Check ketones if glucose >250 4) Seek ER if breathing difficulty"
+  ]
+},
+{
+  "tag": "diabetes111",
+  "patterns": [
+    "Best sleep for diabetics",
+    "Diabetes and insomnia",
+    "Sleep affects blood sugar?"
+  ],
+  "responses": [
+    "Poor sleep increases insulin resistance. Aim for 7-9 hours. OSA (sleep apnea) is common in diabetes - get tested if snoring/daytime fatigue.",
+    "Sleep tips: 1) Keep glucose >100 before bed 2) No screens 1hr pre-sleep 3) Cool room temp 4) Consistent sleep schedule"
+  ]
+},
+{
+  "tag": "diabetes112",
+  "patterns": [
+    "Diabetes and dental care",
+    "Gum disease diabetes link",
+    "Oral health with diabetes"
+  ],
+  "responses": [
+    "Diabetics have 3x higher gum disease risk. Get dental cleanings every 6 months. Control glucose to prevent tooth loss and infections.",
+    "Oral care musts: 1) Brush 2x daily 2) Floss daily 3) Check for bleeding gums 4) Treat dry mouth (common med side effect)"
+  ]
+},
+{
+  "tag": "diabetes113",
+  "patterns": [
+    "Travel tips for diabetics",
+    "Flying with insulin",
+    "Diabetes supplies travel"
+  ],
+  "responses": [
+    "Travel checklist: 2x supplies, doctor's letter, snacks, glucose tabs. Insulin stays carry-on (never checked). Time zone changes require dose adjustments.",
+    "TSA allows diabetes supplies. Use FRIO packs for insulin. Test frequently when changing diets/climates. Know emergency numbers at destination."
+  ]
+},
+{
+  "tag": "diabetes114",
+  "patterns": [
+    "Diabetes and depression",
+    "Mental health with diabetes",
+    "Diabetes burnout"
+  ],
+  "responses": [
+    "30% of diabetics experience depression. Signs: Loss of motivation, sleep changes, guilt about management. Tell your care team - counseling helps.",
+    "Diabetes distress is normal. Join support groups (ADA has virtual meetups). Break tasks into small steps. Celebrate small wins."
+  ]
+},
+{
+  "tag": "diabetes115",
+  "patterns": [
+    "Ketones in urine?",
+    "What are ketones",
+    "Diabetic ketoacidosis"
+  ],
+  "responses": [
+    "Ketones = acid from fat breakdown. Check if glucose >240 mg/dL. Danger signs: Nausea, fruity breath, confusion. DKA requires ER treatment.",
+    "Prevent DKA: 1) Stay hydrated 2) Never skip insulin 3) Test ketones when sick 4) Know emergency symptoms"
+  ]
+},
+{
+  "tag": "diabetes116",
+  "patterns": [
+    "Diabetes and pregnancy",
+    "Planning pregnancy with diabetes",
+    "Fertility and diabetes"
+  ],
+  "responses": [
+    "Preconception A1C should be <6.5%. High glucose causes birth defects. Start prenatal vitamins early. Insulin is safest pregnancy medication.",
+    "Pregnancy needs: 1) Monthly eye exams 2) Frequent glucose checks 3) 400 mcg folic acid 4) Delivery plan by 32 weeks"
+  ]
+},
+{
+  "tag": "diabetes117",
+  "patterns": [
+    "Insulin storage",
+    "How to store insulin?",
+    "How to store insulin",
+    "Traveling with insulin"
+  ],
+  "responses": [
+    "Unopened insulin: Refrigerate (36-46°F). In-use pens: Room temp <86°F for 28 days. Avoid freezing. Discard if cloudy/clumpy.",
+    "Storage tips: 1) Never leave in cars 2) Use insulated bags 3) Rotate injection sites 4) Check expiration dates"
+  ]
+},
+{
+  "tag": "diabetes118",
+  "patterns": [
+    "Diabetes and fasting",
+    "Ramadan with diabetes",
+    "Intermittent fasting diabetes"
+  ],
+  "responses": [
+    "Fasting risks: Hypoglycemia, DKA. Consult doctor first. If fasting: 1) Check glucose 4x/day 2) Break fast if <70 or >300 3) Hydrate well at night",
+    "ADA guidelines: High-risk patients should avoid prolonged fasting. Adjust meds (especially sulfonylureas/insulin). Prioritize dawn/dusk meals."
+  ]
+},
+{
+  "tag": "diabetes119",
+  "patterns": [
+    "Diabetes in children",
+    "Managing kids with diabetes",
+    "School diabetes care"
+  ],
+  "responses": [
+    "School plan should include: 1) Glucose check access 2) Insulin storage 3) Snack permission 4) Emergency contacts. 504 plans protect rights.",
+    "Pediatric management: Carb counting games, CGM alerts for parents, diabetes camps. Puberty increases insulin resistance."
+  ]
+},
+{
+  "tag": "diabetes120",
+  "patterns": [
+    "Latest diabetes treatments",
+    "New diabetes drugs",
+    "GLP-1 agonists"
+  ],
+  "responses": [
+    "2023 advances: 1) Tirzepatide (Mounjaro) - dual GIP/GLP-1 2) Oral insulin trials 3) Smart insulin pens 4) Artificial pancreas systems",
+    "New options: SGLT2 inhibitors protect kidneys, GLP-1s aid weight loss. Always discuss cost/benefits with your endocrinologist."
+  ]
+},
+{
+  "tag": "diabetes121",
+  "patterns": [
+    "Diabetes and vegan diet",
+    "Plant-based diabetes",
+    "Vegetarian with diabetes"
+  ],
+  "responses": [
+    "Plant-based diets improve insulin sensitivity. Focus on: Legumes, nuts, non-starchy veggies. Monitor B12 and iron. Limit processed meat substitutes.",
+    "Vegan tips: 1) Pair carbs with protein 2) Choose low-GI fruits 3) Use flax for omega-3s 4) 30g fiber/day target"
+  ]
+},
+{
+  "tag": "diabetes122",
+  "patterns": [
+    "Diabetes and weight loss",
+    "Best diets for diabetic weight loss",
+    "Ozempic for diabetes"
+  ],
+  "responses": [
+    "Losing 5-10% body weight improves glucose control. Options: Mediterranean diet, low-carb (50-130g/day), or ADA plate method (1/2 non-starchy veg).",
+    "Weight loss meds: GLP-1 agonists (semaglutide) aid 15% weight loss. Bariatric surgery may reverse Type 2 in BMI >35 patients."
+  ]
+},
+{
+  "tag": "diabetes123",
+  "patterns": [
+    "Diabetes and foot care",
+    "Why check feet?",
+    "Diabetic foot ulcers"
+  ],
+  "responses": [
+    "Daily foot checks prevent amputations. Look for: Cuts, blisters, redness. Wear diabetic socks. Podiatrist visits every 6-12 months.",
+    "Foot care rules: 1) No barefoot walking 2) Moisturize (not between toes) 3) Cut nails straight 4) Treat fungal infections early"
+  ]
+},
+{
+  "tag": "diabetes124",
+  "patterns": ["Diabetes doctors near me", "Find endocrinologist", "Diabetes clinics"],
+  "responses": ["Here are ADA-recognized providers in your area: [API-driven location list]"]
+},
+{
+  "tag": "diabetes125",
+  "patterns": ["Cinnamon cures diabetes?", "Natural diabetes remedies", "Apple cider vinegar for diabetes"],
+  "responses": ["While cinnamon may slightly improve insulin sensitivity, it can't replace medication. Always consult your doctor before trying supplements."]
+},
+{
+  "tag": "diabetes126",
+  "patterns": ["Diabetes emergency symptoms", "When to go to ER"],
+  "responses": ["Seek IMMEDIATE care for: 1) Glucose <54 with confusion 2) Moderate/large ketones 3) Unconsciousness 4) Rapid breathing 5) Severe dehydration"]
+},
+{
+  "tag": "diabetes127",
+  "patterns": ["Can't afford insulin", "Diabetes medication costs", "Patient assistance programs"],
+  "responses": ["Resources: 1) Insulin manufacturers' discount cards 2) 340B clinics 3) Medicaid expansion 4) ACA marketplace plans"]
+}]}
